@@ -1500,3 +1500,28 @@ footer {
         gap: 5px;
     }
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logo :hover {
+    transform: scale(1.05);
+}
+
+.logo i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    pointer-events: none;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    font-weight: 700;
+    pointer-events: none;
+}
