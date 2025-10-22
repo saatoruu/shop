@@ -1224,3 +1224,28 @@ function showNotification(message) {
         }, 300);
     }, 3000);
 }
+
+
+// HydroTech logo click - mbalek nek menu utama
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', function(e) {
+        // Stop event bubbling
+        e.stopPropagation();
+        e.preventDefault();
+        
+        // Update active nav link
+        navLinks.forEach(nav => nav.classList.remove('active'));
+        const homeLink = document.querySelector('a[href="#home"]');
+        if (homeLink) homeLink.classList.add('active');
+        
+        // Scroll to home section
+        const homeSection = document.getElementById('home');
+        if (homeSection) {
+            homeSection.scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+    });
+}
